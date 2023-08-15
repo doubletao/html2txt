@@ -81,12 +81,12 @@ namespace html2txt
                     if (tag == "body")
                     {
                         // Discard content before <body>
-                        _text.Clear();
+                        //_text.Clear();
                     }
                     else if (tag == "/body")
                     {
                         // Discard content after </body>
-                        _pos = _html.Length;
+                        //_pos = _html.Length;
                     }
                     else if (tag == "pre")
                     {
@@ -158,6 +158,7 @@ namespace html2txt
         // Consumes inner content from the current tag
         protected void EatInnerContent(string tag)
         {
+            return;
             string endTag = "/" + tag;
             while (!EndOfText)
             {
